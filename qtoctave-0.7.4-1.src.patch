@@ -1,0 +1,47 @@
+--- origsrc/qtoctave-0.7.4/src/CMakeLists.txt	2008-04-16 06:35:54.000000000 -0500
++++ src/qtoctave-0.7.4/src/CMakeLists.txt	2008-07-27 14:52:12.703125000 -0500
+@@ -12,6 +12,7 @@
+ include_directories(${QT_QTGUI_INCLUDE_DIR})
+ include_directories(${QT_QTXML_INCLUDE_DIR})
+ #include_directories(${QT_QTSVG_INCLUDE_DIR})
++include_directories(${CMAKE_CURRENT_BINARY_DIR})
+ 
+ #QT4_WRAP_UI(ui_design_main_window.h design_main_window.ui)
+ QT4_WRAP_UI(ui_general_menu.h operations/general_menu.ui)
+@@ -144,7 +145,7 @@
+ 	)
+ 
+ install	(
+-		PROGRAMS qtoctave
++		TARGETS qtoctave
+ 		DESTINATION bin
+ 	)
+ 
+--- origsrc/qtoctave-0.7.4/src/operations/general_menu.h	2008-04-16 06:35:59.000000000 -0500
++++ src/qtoctave-0.7.4/src/operations/general_menu.h	2008-07-27 14:45:14.984375000 -0500
+@@ -1,4 +1,4 @@
+-#include "../ui_general_menu.h"
++#include "ui_general_menu.h"
+ #include "../config.h"
+ #include <QFont>
+ 
+--- origsrc/qtoctave-0.7.4/src/projects/projects.cpp	2008-04-16 06:35:59.000000000 -0500
++++ src/qtoctave-0.7.4/src/projects/projects.cpp	2008-07-27 14:47:37.406250000 -0500
+@@ -1,5 +1,5 @@
+ #include "projects.h"
+-#include "../ui_newprojectdialog.h"
++#include "ui_newprojectdialog.h"
+ #include <QXmlStreamReader>
+ #include <QXmlStreamWriter>
+ #include <QDir>
+--- origsrc/qtoctave-0.7.4/src/projects/projects.h	2008-04-16 06:35:59.000000000 -0500
++++ src/qtoctave-0.7.4/src/projects/projects.h	2008-07-27 14:44:22.000000000 -0500
+@@ -19,7 +19,7 @@
+ #ifndef __PROJECTS_H__
+ #define __PROJECTS_H__
+ 
+-#include "../ui_projects.h"
++#include "ui_projects.h"
+ #include "../config.h"
+ 
+ using namespace Ui;

@@ -1,0 +1,5 @@
+inherit qt4-cmake
+
+DESCRIPTION="Qt4 Octave GUI"
+HOMEPAGE="http://qtoctave.wordpress.com/"
+SRC_URI="https://forja.rediris.es/frs/download.php/744/${P}.tar.gz"
