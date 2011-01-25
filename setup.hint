@@ -1,0 +1,7 @@
+category: Math
+requires: libgcc1 libQtCore4 libQtGui4 libQtNetwork4 libQtScript4 libQtSvg4 libQtXml4 libstdc++6 octave
+sdesc: "Octave GUI"
+ldesc: "QtOctave is a front-end user interface for the Octave high-level 
+language, primarily intended for numerical computations similar to 
+Matlab. It simplifies the use of Octave for user who are not familiar 
+with the original, command line based version of Octave."

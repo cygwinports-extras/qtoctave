@@ -1,0 +1,17 @@
+--- origsrc/qtoctave-0.8.2/qtjs/src/CMakeLists.txt	2009-06-28 16:53:40.000000000 -0500
++++ src/qtoctave-0.8.2/qtjs/src/CMakeLists.txt	2009-09-24 15:23:08.310443700 -0500
+@@ -37,13 +37,12 @@ SET_TARGET_PROPERTIES(qtjs
+ )
+ 
+ TARGET_LINK_LIBRARIES(qtjs 
+-	${Qt4_LIBRARIES} 
++	${QT_QTUITOOLS_LIBRARY}
+ 	${QT_QTCORE_LIBRARY} 
+ 	${QT_QTGUI_LIBRARY} 
+ 	${QT_QTXML_LIBRARY} 
+ 	#${QT_QTSVG_LIBRARY} 
+ 	${QT_QTSCRIPT_LIBRARY}
+-	${QT_QTUITOOLS_LIBRARY}
+ )
+ 
+ 
